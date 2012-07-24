@@ -1,0 +1,14 @@
+<div id="question_post">
+	<h3><span class="bg"><%= @question.author %> <span class="slim">says</span></span></h3>
+	<%= @question.body %>
+</div>
+
+<% @question.answers.each do |a| %>
+	<div class="question">
+		<h3><span class="bg"><%= a.author %> <span class="slim">asked</span></span></h3>
+		<span class="date"><%= a.created_at.strftime "%D - %l:%M%p" %></span>
+	
+		<p><%= a.body %></p>
+	</div>
+<% end %>
+<%=  render :partial => 'form' %>

@@ -1,0 +1,10 @@
+<div id="question_post">
+	<h2>Got A Question?</h2>
+	<%= form_for :question, :url => questions_path do |f| %>
+	  <%= f.label :author, "Name" %>
+	  <%= f.text_field :author %><br />
+	  <%= f.text_area :body %>
+	
+	  <%= f.submit "Ask the Hub!" %>
+	<% end %>
+</div>

@@ -1,0 +1,14 @@
+<div id="answer_post">
+	<h2>Post your answer</h2>
+	<%= form_for ([@question, @question.answers.build]) do |f| %>
+	  <div class ="field">
+	  <%= f.label :author, "Name" %>
+	  <%= f.text_field :author %><br />
+	  </div>
+	  <div class ="field">
+	  <%= f.text_area :body %>
+	  </div>
+	  <%= f.submit "Answer!" %>
+	<% end %>
+</div>
+

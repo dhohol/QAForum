@@ -1,0 +1,14 @@
+<%=  render :partial => 'form' %>
+<% @questions.each do |q| %>
+	<div class="question">
+		<h3><span class="bg"><%= q.author %> <span class="slim">asked</span></span></h3>
+		<span class="date"><%= q.created_at.strftime "%D - %l:%M%p" %></span>
+		<!-- <%= q.title %></p> -->
+		<p><%= q.body %></p>
+		<span class="followup">
+			<%= link_to("Answer Question", new_question_answer_path(q)) %> |
+			<%= link_to("#{q.answers.count} Replies", question_answers_path(q)) %>
+		</span>
+	</div>
+<% end %>
+<%= will_paginate @questions %>

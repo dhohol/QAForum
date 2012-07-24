@@ -1,0 +1,16 @@
+<!-- 
+
+This new page gets generated when user clicks on "Answer". User will see original question and there will be
+a form submission for a user to answer this question. Once this is successful, user will be redirected back to main
+page. Several things that need to be done here:
+
+1. a new action needs to be defined for the answer controller. Here, it'll pass information for the original question
+based on the id in the html. This will create a link between the answer and the question.
+2. 
+
+-->
+<div id="question_post">
+	<h3><span class="bg"><%= @question.author %> <span class="slim">says</span></span></h3>
+	<%= @question.body %>
+</div>
+<%=  render :partial => 'form' %>
