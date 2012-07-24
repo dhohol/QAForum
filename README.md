@@ -1,0 +1,1 @@
+This application is a simple Question/Answer Forum application that I have written. I'll be adding more stuff post-Aug 2012. Any new stuff that I want to design and implmenet will be added into the issues section and I hope to expand more on this app. For any questions, please email me at daniele.hohol@gmail.com
